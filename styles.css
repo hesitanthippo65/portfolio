@@ -67,7 +67,7 @@ Non-CSS Reset Code
 }
 
 .btn-lg{
-  background-color: darkred;
+  background-color: lightgrey;
 }
 
 .media{
@@ -75,5 +75,72 @@ Non-CSS Reset Code
   width: 6rem;
   height: 6rem;
   object-fit: cover;
+}
+
+/**
+From https://www.digitalocean.com/community/tutorials/how-to-build-a-tiled-layout-with-css-section-3
+*/
+.section-heading {
+  text-align:center;
+  color:#102C4E;
+  margin-top: 150px;
+  margin-bottom:70px;
+  font-size: 35px;
+}
+
+/**
+From https://www.digitalocean.com/community/tutorials/how-to-build-a-tiled-layout-with-css-section-3
+*/
+.column-4 {
+  float: left;
+  width: 27%;
+  padding: 10px;
+  margin: 25px;
+  height: 250px;
+}
+
+/* Color and Images for Project Containers  */
+
+.project-1 {
+  background-color: #209BFF;
+}
+
+.project-2 {
+  background-color:#209BFF;
+}
+
+.project-3 {
+  background-color:#209BFF;
+}
+
+
+.project-text {
+  text-align:center;
+  font-size:40px;
+}
+
+/* Hover classes for individual project boxes */
+
+.project-1:hover {
+  background-color:green;
+}
+
+.project-2:hover {
+  background-color:green;
+}
+
+.project-3:hover {
+   background-color: green;
+}
+
+
+/* SECTION */
+
+.project-descriptions {
+  float: left;
+  width: 75%;
+  padding: 10px;
+  margin: 25px;
+  height: 250px;
 }
 
