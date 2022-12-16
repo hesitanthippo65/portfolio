@@ -5,86 +5,163 @@
     <meta name = "viewport" content = "width=device-width", initial-scale="1">
     <link rel ="stylesheet" href="bootstrap.css">
     <link rel ="stylesheet" href="styles.css">
-    <title> Princeton in Asia </title>
+    <title> Portfolio </title>
+    <link rel="icon" type="image/x-icon" href="images/hippo.png">
   </head>
 
-  <!-- Code from Jeff's Responsive UI Bootstrap Video unless otherwise cited-->
+  <!-- NavBar code from Jeff's Responsive UI Bootstrap Video, with additions from Bootstrap dropdown-->
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark  bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-light  bg-light sticky-top">
        <div class ="container-fluid">  
-      
+        <!-- <img src = "images/hippo.png" alt ="Logo" id =#home width="30px" class = "float-left"> -->
+        <a class="navbar-brand" href="index.html">Portfolio</a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto" role="navigation">
-              <li class="navbar-item"><a class = "nav-link">About</a></li>
-              <li class="navbar-item"><a class = "nav-link" href="personas.html" >Personas</a></li>
-              
-              <li class="navbar-item"><a class = "nav-link">Responsive Redesign</a></li>
-              <!-- <li class="navbar-item"><a href="#personas"> Personas</a></li>
-              <li class="navbar-item"><a href ="#responsive"> Responsive Redesign </a></li> -->
-              <!-- <li class="navbar-item"><a class = "nav-link">Iterative</a></li> -->
-              <li class="navbar-item"><a class = "nav-link">Contact</a></li>
+              <li class="navbar-item"><a class = "nav-link" href="#about">About</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#projects" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="personas.html">Personas</a>
+                  <a class="dropdown-item" href="responsive.html">Responsive</a>
+                  <a class="dropdown-item" href="iterative.html">Iterative</a>
+                  <a class="dropdown-item" href="development.html">Development</a>
+                </div>
+              </li>
+              <li class="navbar-item"><a class = "nav-link" href="#contact">Contact</a></li>
+         
             </ul>
           </div>
         </div> 
     </nav> 
+    <div class="separator"></div>
 
-    <div class="container-fluid text-center"> 
-      <h1>Welcome to My Portfolio</h1>
-    
+    <div class="container-fluid text-center" text-align="justify-center"> 
+      <h2 id="about">About Me</h2>
+
+      <table cellspacing="10" class="center" width="66%">
+        <tr>
+          <td>
+            <img src="images/hippo.png" alt="hippo" style="width: 200px" >
+          </td>
+          <td>
+          <p>Hi! My name is Hesitant Hippo. I am a senior at Brown University and I am currently taking 
+          CS1300: User Interfaces and User Experiences (UIUX). Over the course of this semester, I have 
+          been exploring aspects of design and the human experience. </p> 
+          </td>
+        </tr>
+      </table>
     </div>
 
-    <div class="container-fluid text-center"> 
-      <h2>About Me</h2>
-      <p></p>
+    <div class="separator"></div>
+
+    <div class="container-fluid text-center" >
+      <h2 id="projects">Projects</h2>
     </div>
 
-    <div class="container-fluid text-left"> 
-      <h2 class="section-heading">Projects</h2>
-    
+    <!-- Portfolio Gallery Grid adapted from https://www.w3schools.com/howto/howto_css_portfolio_gallery.asp-->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <a href="personas.html" class="link">
+        <img src="images/betty.jpg" alt="Betty" style="width:100%"></a>
       
-      <div class="column-4 project-1">
-        <h2 class="project-text">PERSONAS</h2>
-
-        <p></p>
-        <a href="#personas">Read more</a>
-      </div>
-      
-      <div class="column-4 project-2">
-        <h2 class="project-text">RESPONSIVE</h2>
-        <a href ="#responsive"> Responsive Redesign </a>
-      </div>
-      
-      <div class="column-4 project-3">
-        <h2 class="project-text">ITERATIVE</h2>
-      </div>
-
+      <h3 id="personas">Personas</h3>
+      <p>For this project, I was tasked with observing users interacting with an interface
+        then creating personas and storyboarding their interaction.</p>
+        <a href="personas.html" class="btn-lg text-dark">Read More</a> 
     </div>
-
-    <div class = "project-descriptions"> 
-      <h3 id = "personas" >Personas and Storyboarding</h3>
-      <!-- https://www.computerhope.com/issues/ch000049.htm#:~:text=Use%20the%20%23id%20selector%20from,selector%20to%20the%20page's%20URL. -->
-      <p >For this project, I was tasked with observing users interacting with an interface
-        then creating personas and storyboarding their interaction.
-      </p>
-      <a href="https://salamander-horse-wsmz.squarespace.com/" class="btn-lg text-dark">Personas Project</a> 
-    
+  </div>
+  <div class="column">
+    <div class="content">
+      <a href="responsive.html" class="link">
+      <img src="images/responsive.png" alt="Responsive" style="width:100%"></a> 
+      <h3 id="responsive">Responsive Redesign</h3>
+      <p>Redesigning a fellowship website to align with usability principles</p>
+      <a href="responsive.html" class="btn-lg text-dark">Read More</a> 
     </div>
-
-    <div class="project-descriptions"> 
-      <h3 id = "responsive">Responsive Redesign</h3>
-      <p >Responsive Redesign Project Description</p>
-      <a href="https://sites.google.com/brown.edu/cs1300responsiveredesign/home?pli=1" class="btn-lg text-dark">Responsive Redesign</a> 
-    
-    </div>
-
-
-    <div class="project-descriptions"> 
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="images/hifi2.png" alt="Hifi Mockup in Figma" style="width:100%">
       <h3>Iterative</h3>
-      <p id = "iterative" >Iterative Project</p>
-      <a href="https://bipolarbear350.github.io/iterative-design/" class="btn-lg text-dark">Iterative</a> 
-    
+      <p>A group project focused on creating high fidelity mockups for a startup</p>
+      <a href="iterative.html" class="btn-lg text-dark">Read More</a> 
     </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="mountains.jpg" alt="Mountains" style="width:100%">
+      <h3>Development</h3>
+      <p>Experimenting with React</p>
+    </div>
+  </div>
+</div>
+
+  <div class="container-fluid text-center">
+    <h2 id="contact">Contact Me</h2>
+    <p>No contact info included to retain anonymity</p>
+  </div>
+
+  <div class="separator"></div>
+
+<!-- Footer adapted from https://mdbootstrap.com/docs/b4/jquery/navigation/footer/#:~:text=A%20footer%20is%20an%20additional,Footers%20are%20responsive%20by%20default.-->
+<footer class="page-footer font-small cyan darken-3">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2022 Copyright:
+     Hesitant Hippo
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
     
-  </body>
+</body>
 
 </html>
